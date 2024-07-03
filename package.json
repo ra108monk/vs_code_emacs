@@ -1,0 +1,256 @@
+{
+  "name": "emacs-region-ramonk",
+  "displayName": "emacs-region-ramonk",
+  "description": "Provides region selection & operations similar to emacs.",
+  "version": "1.0.0",
+  "publisher": "ramonk",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^0.10.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayrtonmassey/vscode-emacs-region"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "keybindings": [
+      {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+p",
+        "command": "cursorUp",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+n",
+        "command": "cursorDown",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+f",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "ctrl+b",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "ctrl+p",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "ctrl+n",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "left",
+        "command": "cursorLeft",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+left",
+        "command": "cursorWordStartLeft",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "down",
+        "command": "cursorDown",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "right",
+        "command": "cursorRight",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+right",
+        "command": "cursorWordEndRight",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "up",
+        "command": "cursorUp",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "ctrl+v",
+        "command": "cursorPageDown",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "alt+v",
+        "command": "cursorPageUp",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "alt+shift+,",
+        "command": "cursorTop",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "alt+shift+.",
+        "command": "cursorBottom",
+        "when": "editorTextFocus && !inRegionMode"
+      },
+      {
+        "key": "left",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "ctrl+left",
+        "command": "cursorWordStartLeftSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "down",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "right",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "ctrl+right",
+        "command": "cursorWordEndRightSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "up",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "cmd+left",
+        "command": "cursorHomeSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "cmd+right",
+        "command": "cursorEndSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "ctrl+v",
+        "command": "cursorPageDownSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "alt+v",
+        "command": "cursorPageUpSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "alt+shift+,",
+        "command": "cursorTopSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "alt+shift+.",
+        "command": "cursorBottomSelect",
+        "when": "editorTextFocus && inRegionMode"
+      },
+      {
+        "key": "left",
+        "command": "cursorColumnSelectLeft",
+        "when": "editorTextFocus && inRegionMode && inColumnRegionMode"
+      },
+      {
+        "key": "down",
+        "command": "cursorColumnSelectDown",
+        "when": "editorTextFocus && inRegionMode && inColumnRegionMode"
+      },
+      {
+        "key": "right",
+        "command": "cursorColumnSelectRight",
+        "when": "editorTextFocus && inRegionMode && inColumnRegionMode"
+      },
+      {
+        "key": "up",
+        "command": "cursorColumnSelectUp",
+        "when": "editorTextFocus && inRegionMode && inColumnRegionMode"
+      },
+      {
+        "key": "cmd+c",
+        "command": "emacs.action.clipboardCopyAction",
+        "when": "inRegionMode"
+      },
+      {
+        "key": "cmd+x",
+        "command": "emacs.action.clipboardCutAction"
+      },
+      {
+        "key": "cmd+v",
+        "command": "emacs.action.clipboardPasteAction"
+      },
+      {
+        "key": "backspace",
+        "command": "emacs.deleteLeft",
+        "when": "inRegionMode"
+      },
+      {
+        "key": "delete",
+        "command": "emacs.deleteRight",
+        "when": "inRegionMode"
+      },
+      {
+        "key": "ctrl+g",
+        "command": "cancelSelection",
+        "when": "editorFocus && editorHasSelection"
+      },
+      {
+        "key": "cmd+space",
+        "command": "emacs.startRegionMode",
+        "when": "editorFocus"
+      },
+      {
+        "key": "cmd+space",
+        "command": "emacs.exitRegionMode",
+        "when": "inRegionMode"
+      },
+      {
+        "key": "ctrl+x space",
+        "command": "emacs.startColumnRegionMode",
+        "when": "editorFocus"
+      }
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^1.7.5",
+    "vscode": "^0.11.0"
+  },
+  "__metadata": {
+    "installedTimestamp": 1709310386949
+  }
+}
